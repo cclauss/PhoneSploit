@@ -13,6 +13,11 @@ import urllib2
 import time as t
 from colorama import Fore, init
 
+try:
+  raw_input
+except NameError:  # Python 3
+  raw_input = input
+
 #=============================
 # Variables
 CurrentDir = os.path.dirname(os.path.abspath(__file__))
