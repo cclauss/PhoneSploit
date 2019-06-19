@@ -12,8 +12,12 @@ import random
 import time as  t
 from colorama import Fore, init
 
-reload(sys)
-sys.setdefaultencoding("utf-8")
+try:
+  raw_input
+  reload(sys)
+  sys.setdefaultencoding("utf-8")
+except NameError:  # Python 3
+  raw_input = input
 
 #=============================
 # Variables
